@@ -1,10 +1,19 @@
+//prime or composite
 #include<stdio.h>
-void main(){
-    int n;
+int main(){
+    int i,n,c=0;
     printf("enter the no: ");scanf("%d",&n);
-    for (int i = 1; i < 11; i++)
+    if (n==1)
     {
-        printf("%d * %d = %d\n",n,i,n*i);
+        printf("not prime/nor composite");
     }
+    else{
+        for ( i = 1; i <=n; i++)
+        {
+        if(n%i==0)c++;
+        }
+        puts(c==2?"prime no":"composite no");
+    }
+    
     
 }
